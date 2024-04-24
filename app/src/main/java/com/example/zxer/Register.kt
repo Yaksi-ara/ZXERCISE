@@ -1,13 +1,15 @@
 package com.example.zxer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 
- class Register : AppCompatActivity(){
+class Register : AppCompatActivity(){
 
      lateinit var usernameInput : EditText
      lateinit var passwordInput : EditText
@@ -54,12 +56,21 @@ import android.widget.EditText
             val weight = weightInput.text.toString()
             val height = heightInput.text.toString()
 
+            // Verificar si los campos están vacíos
+            if (username.isEmpty() || password.isEmpty() || mail.isEmpty() || weight.isEmpty() || height.isEmpty()) {
 
-
+                Toast.makeText(this, "Por favor, ingrese sus datos para crear una cuenta", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, HomeScreen::class.java)
+                startActivity(intent)
+                Log.i("Test Credentials", "Username : $username and Password : $password")
+            }
             Log.d("Register", "Username: $username, Password: $password, Mail: $mail, Weight: $weight, Height: $height, Experience: $selectedExperience")
 
 
         }
+
+
     }
 }
 

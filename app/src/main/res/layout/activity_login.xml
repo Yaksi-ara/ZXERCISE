@@ -13,12 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:src="@drawable/account_circle"/>
+            android:src="@drawable/account_circle"
+            tools:ignore="ContentDescription" />
 
         <EditText
             android:id="@+id/username_input"
@@ -31,7 +33,8 @@
             android:padding="18dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/password_input"
@@ -44,7 +47,8 @@
             android:padding="18dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/login_button"
@@ -55,7 +59,8 @@
             android:padding="18dp"
             android:text="Iniciar sesión"
             android:textColor="#3DA8AE"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,7 +68,8 @@
             android:layout_marginTop="32dp"
             android:text=" O inicia sesión con"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,14 +83,16 @@
                 android:layout_height="64dp"
                 android:layout_margin="16dp"
                 android:id="@+id/facebook_button"
-                android:src="@drawable/facebook" />
+                android:src="@drawable/facebook"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="16dp"
                 android:id="@+id/google_button"
-                android:src="@drawable/google" />
+                android:src="@drawable/google"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
